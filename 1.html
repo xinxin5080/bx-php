@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	function test(){
+		// 定时器、异步ajax、事件的处理程序
+		setTimeout(function(){
+			console.log('start timer');
+		}, 5000)
+
+		console.log(1);
+		console.log(2);
+		console.log(3);
+
+		// 定时器（每个两秒后执行） setInterval(function(){},2000)
+		//延时器（演示一秒后执行?????）
+		/*setTimeout(function(){
+			console.log('end timer');
+		}, 0)*/
+
+	}
+	
+	//test(); //  start timer 1 2 3 end timer  ?   123start startimer end timer
+</script>
+</html>

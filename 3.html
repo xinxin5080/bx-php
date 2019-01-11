@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script src="/static/assets/vendors/jquery/jquery.js"></script>
+<script type="text/javascript">
+
+/*var code = 0;
+
+//注:$.get和$.post默认都是异步请求
+$.get("./3.php",'',function(res){
+    code = res.code;
+},'json');
+
+console.log(code); // */
+
+
+/*var code = 0;
+//注:$.get和$.post默认都是异步请求
+$.post("./3.php",'',function(res){
+    code = res.code;
+},'json');
+
+console.log(code);*/
+
+//$.ajax可以设置同步和异步
+var code = 0;
+$.ajax({
+    "type":"get",
+    "url":"./3.php",
+    "async":false,  // true为异步（默认）  false为同步
+    "success":function(res){
+        console.log(res);
+        code = res.code;
+    }
+});
+console.log(code); // 200
+</script>
+</html>
